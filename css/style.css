@@ -1,0 +1,75 @@
+body {
+  background-color: #EEF9BF;
+}
+header {
+  padding: 40px 0;
+}
+header h2 {
+  font-size: 4em;
+  letter-spacing: -0.4%;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #75B79E;
+}
+.cartas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  
+  width: 932px;
+  margin: 0 auto;
+}
+.cartas .card {
+  width: 120px;
+  height: 160px;
+  border-radius: 5px;
+  background-color: #A7E9AF;
+  border: 1px solid #99CEA8;
+  position: relative;
+  cursor: pointer;
+  transition: .6s;
+}
+.cartas .card:hover {
+  transform: rotateY(30deg);
+  box-shadow: 5px 0 5px 0 #7a7;
+}
+.cartas .card img {
+  display: block;
+  width: 100px;
+
+  position: absolute;
+  top: calc((100% - 100px) / 2);
+  left: calc((100% - 100px) / 2);
+}
+.hidden {
+  opacity: 0;
+}
+.cartas .active {
+  transform: rotateY(180deg);
+}
+.cartas .card.active:hover {
+  transform: rotateY(180deg);
+  box-shadow: none;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 3em;
+    width: 320px;
+    margin: 0 auto;
+  }
+  .cartas {
+    justify-content: center;
+    width: 160px;
+    margin-bottom: 40px;
+  }
+  .cartas .card {
+    width: 150px;
+    height: 200px;
+  }
+  .cartas .card img {
+    width: 120px;
+  }
+}
